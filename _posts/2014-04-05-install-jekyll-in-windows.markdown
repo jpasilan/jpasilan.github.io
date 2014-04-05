@@ -33,13 +33,14 @@ jekyll new blog
 Now, the problem starts when you try to run *__jekyll serve__*. This most likely has something to do with the
 pygment.rb gem. 
 
-To solve this, you can run Python's setuptools. That said, download and install first [Python 2.7] and add its executable path to Windows PATH environment variable. Then download and run [ez_setup.py]. You may need re-open Git Bash so that the changes to the Window's PATH variable will take effect.
+Note that as per Jekyll documentation pygments.rb requires Python to be installed. That said, download and install first 
+[Python 2.7] and add its executable path to Windows PATH environment variable. Then download and run [ez_setup.py]. You may need re-open Git Bash so that the changes to the Window's PATH variable will take effect.
 
 {% highlight bash %}
 python ez_setup.py 
 {% endhighlight %}
 
-There will still be a problem with pygment.rb which can be solved by installing a lower version of it. So run the following gem commands to replace pygment.rb 0.5.4 with 0.5.0.
+There will still likely be a problem with pygment.rb which can be solved by installing a lower version of it. So run the following gem commands to replace pygment.rb 0.5.4 with 0.5.0.
 
 {% highlight bash %}
 gem uninstall pygment.rb 0.5.4
