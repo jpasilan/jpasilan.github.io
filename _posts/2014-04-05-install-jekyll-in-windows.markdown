@@ -40,11 +40,17 @@ Note that as per Jekyll documentation pygments.rb requires Python to be installe
 python ez_setup.py 
 {% endhighlight %}
 
-There will still likely be a problem with pygment.rb which can be solved by installing a lower version of it. So run the following gem commands to replace pygment.rb 0.5.4 with 0.5.0.
+There will still likely be a problem with pygments.rb which can be solved by installing a lower version of it. So run the following gem commands to replace pygments.rb 0.5.4 with 0.5.0.
 
 {% highlight bash %}
-gem uninstall pygment.rb 0.5.4
-gem install pygment.rb 0.5.0
+gem uninstall pygments.rb 0.5.4
+gem install pygments.rb 0.5.0
+{% endhighlight %}
+
+Just recently found out that 0.6.0 already solves this problem as well, so you can install this or the latest instead of 0.5.0.
+
+{% highlight bash %}
+gem install pygments.rb 0.6.0
 {% endhighlight %}
 
 Verify if everything's well already by running the jekyll server and opening up http://localhost:4000 in your preferred browser.
