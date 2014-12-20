@@ -17,12 +17,7 @@ Basically, what this expression means is that after the first delimiter (/) ther
 
 The following is a sample code using this expression and PHP's ***preg_replace()***:
 
-{% highlight php %}
-<?php
-$phoneNumber = '(555) 123-4567';
-$maskedPhoneNumber = preg_replace('/\d(?!\d{0,1}$)/', '*', $phoneNumber);
-?>
-{% endhighlight %}
+{% gist jpasilan/c225ac0ed72e87852d59 %}
 
 And this results in *$maskedPhoneNumber* assigned with the string:
 
