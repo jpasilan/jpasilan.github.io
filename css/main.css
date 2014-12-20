@@ -107,12 +107,27 @@ a:visited { color: #a0a; }
   margin-right: 3em;
 }
 
+.footer .contact ul {
+  margin: 1em 0;
+  list-style: none;
+}
+
+.footer .social-icon {
+  width: 15px;
+  display: inline-block;
+}
+
+.footer .social-icon img {
+  height: 13px;
+}
+
 .footer .copy {
   float: right;
 }
 
 .footer .contact a {
   color: #8085C1;
+  text-decoration: none;
 }
 
 .footer .rss {
