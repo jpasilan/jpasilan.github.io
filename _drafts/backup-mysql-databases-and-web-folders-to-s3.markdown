@@ -7,6 +7,26 @@ categories: Amazon S3
 
 This post will outline how to create and schedule backups to S3.
 
+#Add IAM User
+
+Create IAM group, say S3Admin, and assign it with the S3 full access permission. Then, create an IAM user, say S3User, and add it to the S3Admin group. Download the user credentials taking note of the access and secret keys.
+
+#Install Tools
+
+Install the s3cmd package and run it with the --configure option. It is essential to provide at least the access key, secret key and encryption password. Verify the configuration and if it runs fine save it.
+
+sudo apt-get install s3cmd
+
+s3cmd --configure
+
+A warning pertaining to python-magic being missing may show up when running s3cmd. Install python-pip, the Python package manager, and the python-magic package.
+
+sudo apt-get install python-pip
+
+pip install python-magic
+
+#Write Shell Script
+
 {% highlight bash %}
 #!/bin/bash
 
@@ -118,3 +138,5 @@ echo "Removing all backups in $BACKUP_DIR..."
 rm -rf $BACKUP_DIR/*
 echo "All Done!"
 {% endhighlight %}
+
+#Schedule Backups Through Cron
