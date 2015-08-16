@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Backup MySQL databases and Web Folders to Amazon S3"
+title:  "Backup MySQL Databases and Web Folders to Amazon S3"
 date:   2015-04-16 12:22:26
 categories: Amazon S3
 ---
